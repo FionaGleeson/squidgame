@@ -82,6 +82,12 @@ game_state.main.prototype = {
 
 
 	update: function() {
+		if (this.score >= 10) {
+            game.state.start("end");
+        }
+        
+        
+        
 		game.physics.arcade.collide(this.player, this.platforms);
 
 		this.player.body.velocity.x = 0;
